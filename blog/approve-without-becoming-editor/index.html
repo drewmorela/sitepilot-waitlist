@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Approve without becoming the editor: a lightweight review flow for agent-drafted posts — SitePilot by Zed</title>
+  <meta name="description" content="How small SaaS teams approve scheduled SEO drafts in minutes — PR review or approve-slug — without turning the founder into a full-time editor." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-09-21">2026-09-21</time></p>
+      <h1>Approve without becoming the editor: a lightweight review flow for agent-drafted posts</h1>
+<p>The fastest way to kill a content cadence is making the founder the unpaid editor-in-chief. The second-fastest is auto-publishing every draft and hoping brand risk stays theoretical.</p>
+<p>Small software teams need a third path: <strong>explicit approve in minutes</strong>, light edits only when something is wrong, and a hard rule that nothing goes live without a recorded yes. That is the edit/approve layer SitePilot runs before publish — usable with markdown PRs or a simple “approve &amp;lt;slug&amp;gt;” reply.</p>
+<h2>What “approve” is (and is not)</h2>
+<table>
+<tr><th>Approve is</th><th>Approve is not</th></tr>
+<tr><td>A named person saying this URL can go live</td><td>Rewriting every paragraph</td></tr>
+<tr><td>A recorded timestamp (PR, email, dogfood sign-off)</td><td>Silent merge from draft</td></tr>
+<tr><td>Room for a short fix list</td><td>Becoming a second drafting pass</td></tr>
+<tr><td>Permission to skip the slot</td><td>Pressure to ship mush to keep a streak</td></tr>
+</table>
+<p>If review regularly takes more than ~15 minutes, the draft failed earlier gates. Fix <a href="../qa-gates-before-you-publish/">QA before publish</a>, do not grow the edit ritual.</p>
+<h2>Mode A — PR review (markdown / Git sites)</h2>
+<p>Best when the blog is markdown in a repo (docs-as-blog, static site, GitHub Pages).</p>
+<ol>
+<li>Agent opens a PR with the draft markdown (or generated HTML + source).</li>
+<li>Founder skims H1/H2s, one sample section, and the internal links.</li>
+<li>Comment with light edits <strong>or</strong> approve the PR.</li>
+<li>Merge = publish. Record <code>approved_by</code> / <code>approved_at</code> in frontmatter or the PR.</li>
+</ol>
+<p><strong>Founder skim checklist (under three minutes):</strong></p>
+<ul>
+<li>Does the title match a real buyer job?</li>
+<li>Any claim that feels copied or off-niche?</li>
+<li>Is there ≥1 useful internal link (product or sibling guide)?</li>
+<li>Would you send this URL to a customer tomorrow?</li>
+</ul>
+<p>If any answer is no, request a rewrite or kill the slot. Do not nitpick commas into a second career.</p>
+<h2>Mode B — Draft folder + “approve &amp;lt;slug&amp;gt;”</h2>
+<p>Best when the customer has no Git habit. Drafts live in <code>content/drafts/</code> (or an email attachment). Customer replies with:</p>
+<p>``<code>text approve two-post-week-seo-cadence </code>``</p>
+<p>or</p>
+<p>``<code>text edit: soften the pricing paragraph; then approve </code>``</p>
+<p>Agent incorporates the edit, re-runs QA, moves the file to published, and ships. Same rule: <strong>no approve signal → no publish.</strong></p>
+<h2>Mode C — CMS draft (WordPress later)</h2>
+<p>Create a CMS <code>draft</code>, let the customer tweak in-admin, then flip to publish only after a clear signal. SitePilot’s CMS #1 path is markdown first; WordPress is the fast follow once waitlist votes justify it. Do not run two CMS integrations before the first path has ≥4 dogfood posts with full QA.</p>
+<h2>Keep the founder out of the drafting chair</h2>
+<p>Agents (or a contractor) own outline → draft → QA. The founder owns:</p>
+<ol>
+<li><strong>Cluster sentence</strong> once (who / job / product surface)</li>
+<li><strong>Approve or skip</strong> each slot</li>
+<li>Occasional brand correction (“we never promise X”)</li>
+</ol>
+<p>Everything else is ops. If the founder is rewriting openings every week, either the brief is wrong or the pipeline is shipping drafts that should have failed originality / brand fit earlier.</p>
+<h2>Timing rules that protect cadence</h2>
+<ul>
+<li><strong>Nudge once</strong> if no approve within a few business days, then pause that slot.</li>
+<li><strong>Do not spam-publish</strong> to “use” the week.</li>
+<li><strong>Skip beats dilute</strong> — empty is better than a post you would not put your name on.</li>
+<li><strong>Report the wait</strong> in the <a href="../monday-seo-digest-for-founders/">Monday SEO digest</a> so silence is visible, not mysterious.</li>
+</ul>
+<h2>A 10-minute review script</h2>
+<ol>
+<li>Open the draft (PR or preview URL).</li>
+<li>Read the opening and every H2 — not every sentence.</li>
+<li>Click the internal links; confirm they resolve.</li>
+<li>Scan for spam density (repeated keyword walls).</li>
+<li>Reply: approve · edit-then-approve · kill.</li>
+</ol>
+<p>Done. That is enough accountability for a capped 2-post week without turning product leaders into full-time editors.</p>
+<h2>How this fits SitePilot</h2>
+<p>SitePilot sells scheduled, quality-gated SEO so <strong>more qualified people engage with the product every month while the team keeps building</strong>. Approve-without-editing is how that stays true: agents draft, gates fail closed, humans say yes or no, publish only after yes.</p>
+<p>See the bar in practice on the dogfood blog, or join the <a href="../../index.html">SitePilot waitlist</a> when you want the same loop on your CMS — with review measured in minutes, not evenings.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
