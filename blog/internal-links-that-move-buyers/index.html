@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internal links that move buyers (not bots) — SitePilot by Zed</title>
+  <meta name="description" content="A practical internal-linking pattern for small SaaS blogs: problem → how → product, without spammy footer farms or fake related widgets." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-09-21">2026-09-21</time></p>
+      <h1>Internal links that move buyers (not bots)</h1>
+<p>Scheduled SEO only compounds if a reader can move. A good post that dead-ends is a magazine page. A good post that points to the next useful page — and eventually to the product — is how small software teams get <strong>more qualified people engaging with the product every month while they keep building</strong>.</p>
+<p>This is the internal-linking pattern SitePilot uses on dogfood and aims to bake into publish: human-meaningful links inside the article, not a spammy “related posts” blob glued on after the fact.</p>
+<h2>The job of an internal link</h2>
+<p>An internal link should answer one of these:</p>
+<ol>
+<li><strong>Clarify the problem</strong> the buyer already feels.</li>
+<li><strong>Explain the method</strong> without making them hunt.</li>
+<li><strong>Offer the next step</strong> (waitlist, demo, docs, pricing) when intent is high.</li>
+</ol>
+<p>If a link only exists to “pass PageRank” or hit a keyword quota, delete it. Buyers notice stuffing. So do quality gates.</p>
+<h2>A simple three-node cluster</h2>
+<p>For a small SaaS blog, start with one cluster and three nodes:</p>
+<table>
+<tr><th>Node</th><th>Purpose</th><th>Example on our dogfood site</th></tr>
+<tr><td>Problem / promise</td><td>Name the job in plain language</td><td><a href="../quality-gated-seo-cadence-for-small-saas/">More qualified engagement every month</a></td></tr>
+<tr><td>Cadence / ops</td><td>How you keep shipping without a content hire</td><td><a href="../two-post-week-seo-cadence/">The 2-post week</a></td></tr>
+<tr><td>Quality bar</td><td>Why the posts won’t embarrass the brand</td><td><a href="../qa-gates-before-you-publish/">QA gates before publish</a></td></tr>
+</table>
+<p>Then link <strong>product</strong> from each node once, in context — for us, the <a href="../../index.html">SitePilot waitlist</a>. Not five times in one paragraph.</p>
+<p>You do not need twenty posts before linking works. Three solid URLs that point at each other beat a pile of orphans.</p>
+<h2>Where to place links (so founders actually click)</h2>
+<p>Put links where a skimming founder would naturally want the next answer:</p>
+<ul>
+<li>After you name a method (“fail-closed QA”) → link the QA guide.</li>
+<li>After you recommend a cadence → link the 2-post week.</li>
+<li>After you state the core promise → link the waitlist or product page <strong>once</strong>.</li>
+</ul>
+<p>Prefer mid-article links over a dump at the bottom. Closing CTAs are fine; they are not a substitute for in-context links.</p>
+<p>Avoid:</p>
+<ul>
+<li>Identical anchor text repeated six times</li>
+<li>“Click here” with no meaning</li>
+<li>Footer farms of fifty sitewide links on every URL</li>
+<li>Linking to drafts that are not live</li>
+</ul>
+<h2>Anchors that sound like humans</h2>
+<p>Write the visible text as a phrase the buyer would say or search:</p>
+<ul>
+<li>Good: <code>fail-closed QA before you publish</code></li>
+<li>Good: <code>a practical 2-post week</code></li>
+<li>Weak: <code>click here</code></li>
+<li>Weak: <code>SEO SEO SEO guide</code></li>
+</ul>
+<p>Match the destination. If the page is about approving drafts in minutes, don’t bait with “guaranteed rankings.”</p>
+<h2>Make linking a publish gate</h2>
+<p>SitePilot’s dogfood pipeline treats <strong>internal links as a fail-closed gate</strong>. No real markdown link in the body → the post does not publish. That sounds strict until you’ve cleaned up a month of orphan URLs.</p>
+<p>Minimum bar for a shippable post:</p>
+<ol>
+<li>At least one contextual internal link to a live sibling or product page.</li>
+<li>Link still works after publish (relative paths checked on the real site).</li>
+<li>Anchor text is specific, not stuffed.</li>
+</ol>
+<p>If the cluster isn’t ready, <strong>skip the slot</strong> or publish the foundational node first. Skipping is better than inventing a circular link to nowhere.</p>
+<p>For how that fits a weekly rhythm, see <a href="../two-post-week-seo-cadence/">The 2-post week</a>. For the rest of the checklist, see <a href="../qa-gates-before-you-publish/">What QA gates should catch before you hit publish</a>.</p>
+<h2>A one-week linking checklist</h2>
+<p>Before you approve this week’s posts:</p>
+<ul>
+<li>[ ] Each new URL links to at least one older live URL in the same cluster</li>
+<li>[ ] At least one older URL gains a link <strong>to</strong> the new post (update, don’t orphan)</li>
+<li>[ ] Product / waitlist is linked from the highest-intent paragraph, once</li>
+<li>[ ] No page has a related-posts widget as its only internal links</li>
+<li>[ ] You did not invent metrics or “customers also read” theater</li>
+</ul>
+<h2>What we will not claim</h2>
+<p>Internal links help humans navigate and help search engines understand structure. They are not a guarantee of rankings, traffic, or revenue. We will not publish fake click graphs from dogfood. The success test is simpler: can a busy founder move from problem → method → product without opening a new Google tab?</p>
+<h2>Closing</h2>
+<p>This week, pick one cluster and connect three pages on purpose. If you want that ops pattern on a schedule — capped cadence, QA, approve, publish — the <a href="../../index.html">SitePilot waitlist</a> is the next step. We’re running the same linking bar on our own <a href="../">dogfood blog</a> first.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
