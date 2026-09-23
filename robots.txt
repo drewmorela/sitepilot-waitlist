@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drewmorela.github.io/sitepilot-waitlist/sitemap.xml
