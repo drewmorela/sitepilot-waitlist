@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to write a cluster sentence that survives QA — SitePilot by Zed</title>
+  <meta name="description" content="A practical test for small SaaS founders: write one cluster sentence (who, job, product surface), then stress it against QA gates before any title or draft depends on it." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-10-12">2026-10-12</time></p>
+      <h1>How to write a cluster sentence that survives QA</h1>
+<p>The <a href="../cluster-keyword-map-for-small-saas/">cluster keyword map</a> starts with one sentence: who buys, what job they are trying to finish, and which product surface that job touches. Most small software teams write that sentence in five minutes and then never look at it again. Three weeks later the queue has drifted, drafts fail brand fit, and nobody can say why.</p>
+<p>The fix is not a longer sentence. It is a sentence that has been <strong>tested against the same gates every draft will face</strong>. If the sentence cannot pass QA, nothing downstream of it will pass either.</p>
+<p>This post is the stress test SitePilot runs before a cluster sentence is allowed to feed the topic queue. It fits the core promise: <strong>more qualified people engaging with their product every month while they keep building.</strong> A sentence that survives QA is what keeps those readers qualified.</p>
+<h2>What “survives QA” means for a sentence</h2>
+<p>A draft goes through gates Q1–Q8 (see <a href="../qa-gates-before-you-publish/">QA gates before you publish</a>). A cluster sentence does not get published, but it decides whether drafts can pass four of those gates without a rewrite loop.</p>
+<table><tr><th>Gate</th><th>What the sentence must make possible</th></tr><tr><td>Q1 Originality</td><td>Points at a job you have real material on (tickets, demos, product decisions)</td></tr><tr><td>Q2 Structure</td><td>Narrow enough that a post can hold five H2s without padding</td></tr><tr><td>Q4 Brand / niche fit</td><td>Names a buyer you actually sell to, not an audience you wish you had</td></tr><tr><td>Q6 Internal links</td><td>Implies at least two sibling posts that can link to each other</td></tr></table>
+<p>If any row is a shrug, the sentence is not done. Fix it now, while it costs one line instead of six drafts.</p>
+<h2>The five-question stress test</h2>
+<p>Run these against the sentence, in order. Each takes under a minute. A single “no” sends you back to rewrite.</p>
+<ol><li><strong>Could a real buyer say “that’s me”?</strong> Read the who-part aloud. If it describes a market segment (“SaaS companies”) instead of a person with a role and a team size, it fails.</li><li><strong>Is the job finishable?</strong> “Grow” and “scale” are not jobs. “Raise trial-to-paid without a lifecycle hire” is. A job has a done state.</li><li><strong>Does the product surface exist today?</strong> If the sentence names a feature you have not shipped, every post becomes a roadmap promise. Q4 will fail it.</li><li><strong>Can you name three titles in one minute?</strong> Not good titles, just plausible ones. If you stall at one, the cluster is too thin. If you hit twelve without trying, it is two clusters pretending to be one.</li><li><strong>Would you be embarrassed if a customer read it?</strong> The sentence will leak into intros and briefs. If it sounds like an internal growth memo, the drafts will too.</li></ol>
+<p>Write the answers next to the sentence. That record is what lets an agent, or a teammate, check later drafts against the same bar.</p>
+<h2>Rewrites that pass (and why the first version failed)</h2>
+<p>These are illustrative patterns, not customer quotes.</p>
+<table><tr><th>First version</th><th>Why it fails</th><th>Rewrite that passes</th></tr><tr><td>“Startups that need better SEO”</td><td>No role, no job, no surface</td><td>“Founders of 2–8 person B2B tools who need organic posts that send trial signups while they keep building”</td></tr><tr><td>“Developers who want to learn our API”</td><td>Job is learning, not finishing; drifts into docs</td><td>“Technical founders evaluating a billing API who need to see a working checkout before they commit an afternoon”</td></tr><tr><td>“Teams using AI for content”</td><td>Off-niche, invites listicle bait</td><td>“Small SaaS teams who want a capped, approved publishing cadence instead of a content hire”</td></tr><tr><td>“Product-led companies optimizing activation and retention and expansion”</td><td>Three jobs in one sentence</td><td>Split into three sentences; keep only the one with the most real material</td></tr></table>
+<p>Notice the pattern. Every passing rewrite is longer in the who-part and shorter in the job-part. Specific buyers, single jobs.</p>
+<h2>Where the sentence lives in the pipeline</h2>
+<p>A sentence that passed the stress test still fails if nobody sees it. Put it in three places:</p>
+<ul><li><strong>Top of the cluster map page.</strong> Every title below it must serve it or be cut.</li><li><strong>Top of every draft brief.</strong> One line above the outline, next to the <a href="../one-page-brand-voice-for-seo-agent/">one-page brand voice</a> notes. The writer, human or agent, reads it before H1.</li><li><strong>In the QA brand_fit check.</strong> The reviewer asks one question: does this draft help the buyer in the sentence finish the job in the sentence? Yes or kill.</li></ul>
+<p>That third placement is what makes approval fast. You are not judging prose taste. You are checking one sentence against one draft, which is how you <a href="../approve-without-becoming-editor/">approve without becoming the editor</a>.</p>
+<h2>Signs the sentence is drifting</h2>
+<p>Clusters do not break in one day. They wear. Watch for these in the Monday review:</p>
+<table><tr><th>Signal</th><th>What it usually means</th><th>Action</th></tr><tr><td>Two drafts in a row need a brand_fit rewrite</td><td>Sentence is too broad</td><td>Narrow the who-part</td></tr><tr><td>New titles need a “for example” to connect</td><td>Job has shifted</td><td>Rewrite the job, then re-rank the queue</td></tr><tr><td>Internal links feel forced</td><td>Posts are serving different sentences</td><td>Split the cluster or kill the outlier</td></tr><tr><td>You keep reaching for a feature you have not shipped</td><td>Surface is aspirational</td><td>Pin the surface to what exists</td></tr></table>
+<p>When a signal shows up, change the sentence on Monday, not mid-week. Changing it inside a cadence week strands drafts that were written against the old version. If a draft no longer fits, <a href="../when-to-kill-a-draft-not-rewrite/">kill it instead of rewriting</a>.</p>
+<h2>A ten-minute routine</h2>
+<p>If you only have ten minutes this week:</p>
+<ol><li>Paste the current cluster sentence into a blank note.</li><li>Run the five questions. Write yes or no next to each.</li><li>If any no, rewrite once. Do not polish past the first passing version.</li><li>Check the next two queued titles against the new sentence. Kill one if it no longer fits.</li><li>Paste the sentence at the top of the next draft brief.</li></ol>
+<p>That is the whole job. The point is not a perfect sentence. The point is a sentence that every gate downstream can lean on.</p>
+<h2>Product note (one CTA, in context)</h2>
+<p>SitePilot pins the cluster sentence into every brief and checks drafts against it before anything ships, so small SaaS teams get a steady, quality-gated cadence without becoming the full-time editor. If that is the system you want, join the <a href="../../index.html#waitlist">waitlist</a> when you are ready.</p>
+<h2>Recap</h2>
+<ul><li>A cluster sentence names one buyer, one finishable job, and one product surface that exists today.</li><li>Stress it with five questions before titles depend on it.</li><li>Specific buyers, single jobs: longer who-part, shorter job-part.</li><li>Put it at the top of the map, every brief, and the brand_fit check.</li><li>Change it on Monday when drift shows, never mid-week.</li></ul>
+<p>If the sentence cannot pass QA, no draft written from it will either.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
