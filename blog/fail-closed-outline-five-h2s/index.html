@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fail-closed outline: five H2s before a single paragraph — SitePilot by Zed</title>
+  <meta name="description" content="A structure gate for small SaaS blogs: write five H2s and test them before any paragraph exists, so weak posts die at the outline instead of after a full draft and a long review." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-10-19">2026-10-19</time></p>
+      <h1>Fail-closed outline: five H2s before a single paragraph</h1>
+<p>Most bad posts were bad before the first paragraph. The angle was fuzzy, two jobs were stuffed into one title, or the middle section had nothing to say. A full draft hides that for a while. Prose is good at sounding finished. Then the founder spends twenty minutes reviewing something that should never have been written, and the <a href="../when-to-kill-a-draft-not-rewrite/">kill-or-rewrite decision</a> arrives a day late.</p>
+<p>A fail-closed outline moves that decision upstream. Before anyone writes a paragraph, the post has to earn its structure: five H2s, each one tested. If the five do not hold up, the post does not get drafted. Nothing ships by default.</p>
+<p>This serves the same promise as the rest of this series: <strong>more qualified people engaging with the product every month while the team keeps building.</strong> Cheap kills at the outline stage are how a small software company keeps a two-post week without the review loop eating the week.</p>
+<h2>Why five, and why H2s</h2>
+<p>Five is not magic. It is a useful forcing number for a 900 to 1,500 word post written for a founder or an early buyer.</p>
+<ul><li><strong>Fewer than four</strong> usually means the post is one idea stretched thin. That is often a section of another post, not a post.</li><li><strong>More than six</strong> usually means two posts are hiding in one. Split it, or cut until one job remains.</li><li><strong>Five</strong> is enough room for a setup, two or three working sections, and a close that tells the reader what to do Monday.</li></ul>
+<p>H2s are the right level to test because they are what a skimming reader actually sees. They are also what the <a href="../qa-gates-before-you-publish/">structure gate</a> already checks for. If the H2s alone do not tell a buyer what they will be able to do after reading, the paragraphs underneath will not fix it.</p>
+<h2>The five tests each H2 has to pass</h2>
+<p>Run every heading through the same five questions. One failed test on one heading is a fix. Two or more failed headings is a kill.</p>
+<table><tr><th>Test</th><th>Pass looks like</th><th>Fail looks like</th></tr><tr><td><strong>Claimable</strong></td><td>A plain statement a reader can agree or disagree with</td><td>A topic label (&quot;Overview&quot;, &quot;Considerations&quot;)</td></tr><tr><td><strong>On the cluster sentence</strong></td><td>Serves the same buyer and job as the <a href="../cluster-sentence-that-survives-qa/">cluster sentence</a></td><td>Drifts to a different buyer or a second job</td></tr><tr><td><strong>Non-overlapping</strong></td><td>Says something no other H2 in this post says</td><td>Restates a sibling heading in new words</td></tr><tr><td><strong>Answerable from what you know</strong></td><td>You can write it from real product work, docs, or customer questions</td><td>Needs a statistic, quote, or case study you do not have</td></tr><tr><td><strong>Earns its place</strong></td><td>Removing it would leave the reader stuck</td><td>Removing it changes nothing</td></tr></table>
+<p>The fourth test does the most quiet work. A heading that needs evidence you do not have is the place where invented numbers creep in later. Kill that heading now, or rewrite it around something true, such as a step you actually run or a question a customer actually asked. The <a href="../customer-evidence-snippets-without-fake-case-studies/">customer evidence guide</a> covers what counts.</p>
+<h2>A worked example: before and after</h2>
+<p>Here is an outline for a post an agent might propose for a small analytics SaaS. The title was &quot;How to improve onboarding emails.&quot;</p>
+<p><strong>First pass (fails):</strong></p>
+<ol><li>Why onboarding matters</li><li>Best practices for onboarding emails</li><li>Tools to consider</li><li>Measuring success</li><li>Conclusion</li></ol>
+<p>Three headings are topic labels. &quot;Tools to consider&quot; drifts away from the job. &quot;Measuring success&quot; needs benchmark numbers that do not exist yet. And &quot;Conclusion&quot; earns nothing. That is four failed headings out of five, so this outline is a kill, not a rewrite.</p>
+<p><strong>Second pass, after tightening the job to one thing (passes):</strong></p>
+<ol><li>The first email should ask for one setup step, not a tour</li><li>Day-two silence usually means the setup step was too big</li><li>Split the setup step until a new user can finish it in one sitting</li><li>Write the follow-up around the step they skipped, not the feature list</li><li>What to check in your own signup data this week</li></ol>
+<p>Every heading is a claim. Each one serves one buyer (a founder whose trial users stall after signup) and one job (getting them through a first setup step). None of them needs a number the team does not have. Heading five sends the reader to their own data instead of inventing a benchmark.</p>
+<p>The second outline took about ten minutes. The first one would have cost a full draft and a review before anyone noticed it was hollow.</p>
+<h2>Where the outline gate sits in the pipeline</h2>
+<p>The order matters more than the template.</p>
+<ol><li><strong>Cluster sentence</strong> is fixed for the week. It is the yardstick.</li><li><strong>Title is claimed</strong> from the topic queue only when a slot is free.</li><li><strong>Five H2s are written</strong> and nothing else. No intro, no bullets underneath.</li><li><strong>The five tests run.</strong> One fix is allowed. Two or more fails is a kill, and the title goes back to the queue or gets crossed out.</li><li><strong>Only a passing outline is drafted.</strong> The draft then runs the normal gates before anyone approves it.</li></ol>
+<p>Step four is the fail-closed part. A missing check is not a pass. If nobody ran the five tests, the outline did not pass. An agent that cannot answer &quot;which test did heading three pass?&quot; should stop and say so rather than draft anyway.</p>
+<p>This also makes the human review shorter. When the founder opens a draft, the skeleton is already approved. They are checking voice and facts against the <a href="../one-page-brand-voice-for-seo-agent/">one-page brand voice brief</a>, not arguing with the shape of the post. That is most of what <a href="../approve-without-becoming-editor-week-3/">approving without becoming the editor</a> looks like in practice.</p>
+<h2>Common ways the gate gets skipped</h2>
+<ul><li><strong>&quot;I&#x27;ll fix the structure in the draft.&quot;</strong> You will not. Prose makes a weak structure feel solid, and the review gets longer instead.</li><li><strong>Writing the intro first.</strong> A good intro makes you want to keep the outline, even when the outline is wrong. Write it last.</li><li><strong>Letting sub-bullets carry the argument.</strong> If the real point lives in an H3 or a bullet, it should be the H2.</li><li><strong>Keeping a dead heading because the draft is half done.</strong> Sunk words are not a reason. Cut it and check whether four headings still make a post.</li><li><strong>Testing headings against the title instead of the cluster sentence.</strong> Titles move. The cluster sentence is the fixed point for the week.</li></ul>
+<h2>Product note (one CTA, in context)</h2>
+<p>SitePilot runs the outline gate before any drafting starts, and kills outlines that fail instead of drafting around them, so small SaaS teams get a steady, quality-gated publishing cadence without reviewing posts that should never have existed. If that is the system you want, join the <a href="../../index.html#waitlist">waitlist</a> when you are ready.</p>
+<h2>Recap</h2>
+<ul><li>Write five H2s before any paragraph. Fewer than four is thin, and more than six is two posts.</li><li>Test every heading: claimable, on the cluster sentence, non-overlapping, answerable from what you know, earns its place.</li><li>One failed heading is a fix. Two or more is a kill.</li><li>Only a passing outline gets drafted, and an untested outline counts as failed.</li><li>The founder reviews voice and facts, not structure.</li></ul>
+<p>Kill it at five headings, and you never have to kill it at 1,200 words.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
