@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When the Monday digest should say \&quot;skip\&quot; and still look serious — SitePilot by Zed</title>
+  <meta name="description" content="How a small SaaS founder&#x27;s Monday digest should report a deliberate skip: every section still filled, one reasoned skip line, a named next title, and no apology or vanity padding." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-10-20">2026-10-20</time></p>
+      <h1>When the Monday digest should say &quot;skip&quot; and still look serious</h1>
+<p>Some Mondays the honest report is short. A draft failed a gate, a release ate the week, or the next title in the queue was not ready. The slot stayed empty on purpose. That is the right call, and the <a href="../skip-slot-keep-habit/">skip ritual</a> explains how to make it without losing the habit.</p>
+<p>The harder part comes a few days later, when the <a href="../monday-seo-digest-for-founders/">Monday digest</a> goes out. A digest with nothing in the shipped column can read like the system stalled. Write it badly and the founder starts to wonder whether the blog is still running at all. Write it well and a skip week looks like what it is: a quality bar doing its job.</p>
+<p>This post is for founders of small software companies, one to ten people, whose blog used to bring in buyers and went quiet once product work took over. The goal of the whole loop is <strong>more qualified people engaging with the product every month while the team keeps building.</strong> The digest is how the founder knows that loop is alive, including in the weeks when it publishes less.</p>
+<h2>A skip week still owes the founder a full digest</h2>
+<p>The tempting move is to send nothing. Nothing shipped, so there is nothing to say. That instinct is backwards.</p>
+<p>A missing digest is the only output that is truly ambiguous. The founder cannot tell a deliberate skip from a broken pipeline, a stalled approval, or an agent that quietly stopped. A full digest that says &quot;skip, here is why, here is what is next&quot; removes that doubt in under a minute.</p>
+<p>There is a second reason. Over a quarter, the digests are the record of how the cadence actually behaved. If the skip weeks have no report, the record only shows the good weeks. That makes it impossible to see whether skips cluster around releases, thin briefs, or slow approvals. The skip digest is the data point that makes the next decision possible.</p>
+<p>So the rule is simple. <strong>The digest goes out every Monday, whether the shipped list has two lines, one, or none.</strong> Same weekday, same format, same sender.</p>
+<h2>Every section stays filled; only the shipped list may be short</h2>
+<p>A serious skip digest keeps all five sections. It does not collapse into a single apologetic paragraph. What changes is which sections carry the weight.</p>
+<table><tr><th>Section</th><th>In a normal week</th><th>In a skip week</th></tr><tr><td><strong>1. Shipped</strong></td><td>Live URLs with approver</td><td>Any URL that did ship, or the word &quot;none&quot; on its own line</td></tr><tr><td><strong>2. QA</strong></td><td>Pass / rewrite / killed counts</td><td>Same counts, and the failed gate named if it caused the skip</td></tr><tr><td><strong>3. Skipped</strong></td><td>Often &quot;none&quot;</td><td>The skip line (see below), one per empty slot</td></tr><tr><td><strong>4. Next queue</strong></td><td>Two or three titles with dates</td><td>Two or three titles with dates, and the replacement title promoted first</td></tr><tr><td><strong>5. Ask</strong></td><td>One unblock, or none</td><td>One unblock only if the skip needs a founder decision</td></tr></table>
+<p>The point of the table is that &quot;none&quot; is allowed in exactly one place. If section 4 is also empty, the problem is not a skip. The queue has gone stale, and the digest should say that plainly and ask for a cluster sentence.</p>
+<p>Section 2 matters more than usual in a skip week. If the skip came from a failed gate, name the gate. &quot;Originality fail on the draft for title X&quot; tells the founder the <a href="../qa-gates-before-you-publish/">QA gates</a> caught something real. &quot;Quality hold&quot; with no detail sounds like an excuse.</p>
+<h2>One skip line carries the whole week</h2>
+<p>Most of the credibility of a skip digest lives in a single line. It needs four parts, in the same order every time: the date and slot, the word SKIP, a reason code with a short specific reason, and the next title.</p>
+<p>Here is the template:</p>
+<pre><code>YYYY-MM-DD &lt;Day&gt; slot &lt;n&gt; -&gt; SKIP -- &lt;reason code&gt;: &lt;specific reason&gt;; next: &lt;title&gt; (&lt;target date&gt;)</code></pre>
+<p>And here is what a full skip-week digest can look like, using a hypothetical week where one slot shipped and one did not:</p>
+<pre><code>Subject: SitePilot weekly -- YYYY-MM-DD
+
+1) Shipped
+- &lt;Title A&gt; -- https://... (approved by &lt;name&gt;)
+
+2) QA
+- Pass / fail-&gt;rewrite / killed: 1 / 0 / 1
+- Killed: draft for &lt;Title B&gt; failed brand fit (generic advice, no product tie)
+
+3) Skipped
+- YYYY-MM-DD Tue slot 2 -&gt; SKIP -- QA fail: brand fit on &lt;Title B&gt;, killed not rewritten; next: &lt;Title C&gt; (next Mon)
+
+4) Next queue
+- &lt;Title C&gt; (next Mon) -- promoted from backlog
+- &lt;Title D&gt; (next Tue)
+
+5) Ask
+- None this week.</code></pre>
+<p>Four reason codes cover nearly every skip a small team will see: <strong>QA fail</strong>, <strong>release conflict</strong>, <strong>brief not ready</strong>, and <strong>waiting on approve</strong>. Keep the code short so skips can be counted later. Keep the reason after the colon specific enough that the founder could check it. &quot;Release freeze through Thursday&quot; is checkable. &quot;Busy&quot; is not.</p>
+<p>If the draft was killed rather than parked, say so. The <a href="../when-to-kill-a-draft-not-rewrite/">kill-or-rewrite rubric</a> exists so that a dead draft is a decision on the record, not a file someone might publish by accident next month.</p>
+<h2>Three ways a skip digest stops looking serious</h2>
+<p>Most skip digests that read badly fail in one of three ways.</p>
+<p><strong>The apology.</strong> &quot;Sorry, we didn&#x27;t get to the blog this week, things have been crazy, we&#x27;ll make it up next week.&quot; This reads as a missed obligation instead of a decision. It also quietly promises a catch-up week, which breaks the cap. The <a href="../two-post-week-seo-cadence/">two-post week</a> is a ceiling, not a debt. Drop the apology and state the reason code.</p>
+<p><strong>The empty shell.</strong> A digest with five headings and &quot;n/a&quot; under each one. It is technically on time and tells the founder nothing. If QA, skipped, and next queue are all blank, the digest has not done its job. Those three sections should never be empty at the same time.</p>
+<p><strong>The vanity patch.</strong> Filling the gap with something that looks like progress: a list of keyword ideas, a screenshot of an analytics dashboard, a line about &quot;impressions trending up&quot; with no date or source. Founders can smell padding. It also teaches the system that a quiet week has to be dressed up, which is the same pressure that leads to guilt-shipping thin posts. If real search or signup numbers exist, report them with dates and caveats in any week. Never use them to cover a skip.</p>
+<h2>Two skips in a row is a signal for the queue</h2>
+<p>One skip is routine. The digest should make it look routine, because it is.</p>
+<p>Two skips in a row, or skips that keep landing on the same slot, are worth a sentence in section 5. The reason codes do the diagnosis for you:</p>
+<ul><li><strong>Repeated QA fails</strong> usually mean the titles are drifting off the cluster sentence. Tighten the queue before the next draft, and consider moving the structure check earlier with a <a href="../fail-closed-outline-five-h2s/">fail-closed outline</a> so weak posts die before a full draft exists.</li><li><strong>Repeated release conflicts</strong> mean the slot day is wrong for the team&#x27;s ship rhythm. Move the slot, not the bar.</li><li><strong>Repeated &quot;waiting on approve&quot;</strong> means the founder review is too heavy. That is a sign to revisit how <a href="../approve-without-becoming-editor-week-3/">approving without becoming the editor</a> is set up, not a reason to auto-publish.</li><li><strong>Repeated &quot;brief not ready&quot;</strong> means the queue has fewer real titles than it claims. Add customer questions before adding slots.</li></ul>
+<p>This is where the skip digest earns its keep. It turns an empty week into one useful ask, and only one. The founder reads it in two minutes, makes one call if needed, and goes back to building.</p>
+<h2>Product note (one CTA, in context)</h2>
+<p>SitePilot sends the Monday digest every week, including skip weeks, with a reason-coded skip line, the gate that caused it, and the next title already promoted. Small SaaS teams get a quality-gated publishing cadence they can trust without checking on it. If that is the loop you want for your product blog, join the <a href="../../index.html#waitlist">waitlist</a>.</p>
+<h2>Recap</h2>
+<ul><li>Send the digest every Monday, even when nothing shipped. Silence is the only truly ambiguous report.</li><li>Keep all five sections. Only the shipped list may say &quot;none.&quot;</li><li>Write one skip line per empty slot: date and slot, SKIP, reason code with a checkable reason, next title.</li><li>Name the failed gate when QA caused the skip.</li><li>No apology, no empty shell, no vanity numbers to cover the gap.</li><li>Two skips in a row become one clear ask about the queue, the slot day, or the review load.</li></ul>
+<p>A skip that is reported well is not a gap in the record. It is proof the bar is real.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
