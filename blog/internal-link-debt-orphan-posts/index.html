@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internal link debt: fixing orphan posts without a redesign — SitePilot by Zed</title>
+  <meta name="description" content="How a small SaaS founder can find orphan blog posts, pay down internal link debt in short capped passes, and log what was skipped, without a site redesign or a link farm." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-10-26">2026-10-26</time></p>
+      <h1>Internal link debt: fixing orphan posts without a redesign</h1>
+<p>Most small software blogs do not have a design problem. They have a debt problem. Posts went live one at a time, each written for its own week, and nobody went back to connect them. A year later the blog has thirty articles and half of them have no other page pointing at them. Readers who land on one post have nowhere honest to go next.</p>
+<p>The usual reaction is to plan a redesign: new templates, a resources hub, a &quot;related posts&quot; widget. That is weeks of work, and it treats the symptom with furniture. The cheaper fix is to pay the debt down in short, capped passes, the same way you would clear a backlog of small bugs.</p>
+<p>This post is for founders of small SaaS companies, one to ten people, who have a blog that used to bring in buyers and now mostly sits there. The goal stays the same as every other part of the publishing loop: <strong>more qualified people engaging with the product every month while the team keeps building.</strong> Orphan posts work against that goal quietly, because a reader who cannot find the next step leaves.</p>
+<h2>What counts as internal link debt</h2>
+<p>Internal link debt is the gap between the links your posts should have and the links they actually have. It builds up in three ways.</p>
+<table><tr><th>Type of debt</th><th>What it looks like</th><th>Why it happens</th></tr><tr><td><strong>Orphan post</strong></td><td>No other live page links to it, except the blog index or sitemap</td><td>Published, announced once, never referenced again</td></tr><tr><td><strong>Dead end</strong></td><td>The post links nowhere useful; the reader finishes and has no next step</td><td>Written before the sibling posts existed</td></tr><tr><td><strong>Broken or stale edge</strong></td><td>A link points to a removed, renamed, or killed post</td><td>Posts were deleted without a cleanup pass</td></tr></table>
+<p>An index page and a sitemap do not pay this debt. They help a crawler find the URL. They do not help a reader who just finished a paragraph and wants the next answer. The test is whether a person in the middle of reading would follow the link.</p>
+<p>If you already ran a <a href="../reciprocal-linking-checklist/">reciprocal linking pass after week two</a>, you have the habit. Link debt is what happens when that habit lapses for a few months, or when the blog predates it.</p>
+<h2>Find the orphans in one sitting</h2>
+<p>You do not need a crawler subscription to start. You need a list of live URLs and thirty minutes.</p>
+<ol><li><strong>Export the live list.</strong> Pull every published post from the CMS or the sitemap. Title, URL, publish date.</li><li><strong>Count inbound links per post.</strong> For each URL, search the other posts for its slug. Ignore the blog index, the sitemap, and any footer or nav that repeats on every page.</li><li><strong>Mark the zeros.</strong> Any post with zero in-body inbound links is an orphan. Any post with zero outbound links to a sibling is a dead end.</li><li><strong>Mark the broken edges.</strong> Any link that points to a URL not on the live list is broken. Fix these first; they are the only debt that actively hurts a reader.</li><li><strong>Write it down.</strong> A plain table is enough: URL, inbound count, outbound count, status.</li></ol>
+<p>On a small blog this is honest manual work. A search across your markdown or HTML files for each slug is enough. Do not guess at counts; if a post is in a CMS you cannot search, mark it &quot;unknown&quot; and check it by hand in the next pass.</p>
+<h2>Decide each orphan&#x27;s fate before you link it</h2>
+<p>Not every orphan deserves a link. Some are orphans because nothing related was ever written. Some are orphans because they should not be on the site. Linking a weak post from a strong one passes the reader to the weak post, which is worse than leaving it alone.</p>
+<p>Give each orphan one of four outcomes:</p>
+<table><tr><th>Outcome</th><th>When it applies</th><th>What you do</th></tr><tr><td><strong>Link</strong></td><td>The post answers a real next question for a reader of at least one live sibling</td><td>Add one in-body link from that sibling, in a natural sentence</td></tr><tr><td><strong>Wait</strong></td><td>The post is fine, but its natural sibling has not been written yet</td><td>Leave it, and put the missing sibling title in the queue</td></tr><tr><td><strong>Merge</strong></td><td>Two posts answer the same question</td><td>Fold the useful part into the stronger post, redirect the weaker URL, strip inbound links to it in the same change</td></tr><tr><td><strong>Retire</strong></td><td>The post is off-cluster, outdated, or would fail your <a href="../qa-gates-before-you-publish/">QA gates</a> today</td><td>Remove it or mark it no-index; do not link to it</td></tr></table>
+<p>The order matters. Decide the outcome first, then edit. Linking first and deciding later is how blogs end up passing readers into posts they would be embarrassed to publish now.</p>
+<p>If you are unsure whether a post belongs, check it against your <a href="../cluster-keyword-map-for-small-saas/">one-page cluster map</a>. A post that does not fit any cluster on the map is usually a retire, not a link.</p>
+<h2>Pay it down in capped passes, not a weekend binge</h2>
+<p>The temptation, once you see the table, is to fix everything at once. That produces the exact result the debt list was meant to avoid: links added because a spreadsheet said so, not because a sentence needed them.</p>
+<p>Use a cap instead.</p>
+<ul><li><strong>Two older posts edited per pass.</strong> One new link each, two only if the second is obvious.</li><li><strong>One pass per week at most,</strong> on a day that is not a publish day.</li><li><strong>Broken edges first,</strong> then orphans in your strongest cluster, then dead ends.</li><li><strong>No new transition paragraphs.</strong> If the link needs a new paragraph to justify it, the sibling relationship is not real. Mark it &quot;wait&quot; and move on.</li><li><strong>No widgets.</strong> A &quot;related posts&quot; block does not count as paying debt. It is a footer farm with better styling.</li></ul>
+<p>At that pace, a blog with fifteen orphans clears its worst debt in about two months while still publishing on its normal cadence. That is slow on purpose. Each link is one you can defend.</p>
+<p>The pattern for which direction a link should go is covered in <a href="../internal-links-that-move-buyers/">internal links that move buyers</a>: problem to method, method to quality bar, and any strong node to the product once. Link debt passes follow the same rules; they just start from the orphan list instead of the newest post.</p>
+<h2>Log every pass so the debt does not come back</h2>
+<p>A pass that is not written down gets redone, badly, three months later. Add one line to the <a href="../monday-seo-digest-for-founders/">Monday digest</a> for each pass:</p>
+<pre><code>YYYY-MM-DD link debt pass -- fixed: &lt;n broken&gt;; linked: &lt;orphan&gt; from &lt;sibling&gt;; waited: &lt;orphan&gt; (needs &lt;title&gt;); retired: &lt;url&gt;</code></pre>
+<p>That line does three jobs. It shows the founder the blog is being maintained, not just added to. It records which orphans were skipped and why, so nobody &quot;fixes&quot; them later with a forced link. And over a quarter it shows whether debt is shrinking or whether new posts keep shipping without a sibling link.</p>
+<p>If the debt keeps growing, the problem is upstream. New posts are going live without an outbound link to a sibling, which means the publish checklist is missing a step. Fix the checklist, not just the backlog.</p>
+<h2>What done looks like</h2>
+<p>You are out of link debt when:</p>
+<ul><li>Every live post has at least one in-body link from a sibling, or a written reason it is waiting</li><li>No link on the site points at a removed or renamed URL</li><li>Every post links out to at least one sibling or to the product, once, in context</li><li>Retired and merged posts are gone, with their inbound links stripped in the same change</li><li>The digest has a short history of passes, each with what was skipped</li></ul>
+<p>None of that needed a redesign. It needed a list, a cap, and a habit of writing down the skips.</p>
+<h2>Start this week</h2>
+<ol><li>Export your live post list and count in-body inbound links per URL.</li><li>Fix every broken edge in one sitting.</li><li>Give each orphan an outcome: link, wait, merge, or retire.</li><li>Run one capped pass on two older posts, and log it in the digest.</li><li>Add &quot;one outbound sibling link&quot; to your publish checklist so new posts stop adding to the debt.</li></ol>
+<p>If you want a publishing agent that ships on a capped cadence, links new posts into the cluster as they go live, and logs every skip, <a href="../../index.html#waitlist">join the SitePilot waitlist</a>. It runs the same rules this blog runs on.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
