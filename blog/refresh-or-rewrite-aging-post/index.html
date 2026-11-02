@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refresh or rewrite: updating an aging post without losing its URL — SitePilot by Zed</title>
+  <meta name="description" content="How a small SaaS founder decides whether an older blog post needs a light refresh or a full rewrite, and how to do either one without changing the URL or losing the links that point at it." />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-11-02">2026-11-02</time></p>
+      <h1>Refresh or rewrite: updating an aging post without losing its URL</h1>
+<p>Every blog that keeps a steady cadence eventually has a second job: looking after the posts it already shipped. A screenshot shows an old version of the product. A step mentions a setting you renamed. A post that answered a buyer question well last spring now answers it halfway.</p>
+<p>The usual reaction is one of two extremes. Either nobody touches old posts because new ones feel more productive, or someone decides the post is &quot;bad now&quot; and publishes a new version at a new address. The first lets good pages quietly decay. The second throws away the one thing an older post has that a new one does not: a URL that search engines and other pages already trust.</p>
+<p>This post is for founders of small SaaS companies, one to ten people, who run a capped publishing cadence and have a growing archive. The goal stays the same as for new posts: <strong>more qualified people engaging with the product every month while the team keeps building.</strong> Maintenance counts toward that goal only when it keeps a useful page useful without breaking what already points at it.</p>
+<h2>Why the URL is the asset</h2>
+<p>An older post usually has three things a new one has to earn from zero:</p>
+<ul><li><strong>Search history.</strong> The page has been crawled, indexed, and maybe ranked for a few queries.</li><li><strong>Inbound links.</strong> Other posts on your site link to it, and sometimes outside pages do too.</li><li><strong>Reader paths.</strong> People reach it from your digest, your docs, or a sibling post, and move on to the next page from there.</li></ul>
+<p>Changing the URL resets all three unless you redirect carefully, and on simple static hosting you often cannot redirect at all. Changing the content at the same URL keeps them. So the default for any update is the same: <strong>same slug, same address, better page.</strong></p>
+<h2>Refresh or rewrite: the decision</h2>
+<p>Before touching anything, decide which kind of update the post needs. The difference is not how much text changes. It is whether the post still answers the same question.</p>
+<table><tr><th></th><th>Refresh</th><th>Rewrite</th></tr><tr><td>Core question</td><td>Still right</td><td>Still right, but the answer changed</td></tr><tr><td>What changes</td><td>Facts, steps, screenshots, links</td><td>Structure, argument, most sections</td></tr><tr><td>Time</td><td>Under an hour</td><td>About as long as a new post</td></tr><tr><td>Counts as a publish slot</td><td>No</td><td>Yes</td></tr><tr><td>URL</td><td>Same</td><td>Same</td></tr></table>
+<p>If the post no longer answers a question your buyers ask, neither option fits. That is a retirement, covered at the end.</p>
+<p>This is a different call from <a href="../when-to-kill-a-draft-not-rewrite/">killing a draft before it ships</a>. A draft has no history to protect, so killing it is cheap. A published post has history, so the bias flips toward keeping the page and improving it.</p>
+<h2>How to run a refresh</h2>
+<p>A refresh fixes what went stale and leaves the argument alone. Work through it in this order:</p>
+<ol><li><strong>Re-read it as a buyer.</strong> Note every sentence that is now wrong, vague, or out of date. Do not fix anything yet.</li><li><strong>Fix facts and steps.</strong> Update renamed settings, changed limits, and steps that no longer match the product.</li><li><strong>Check every link.</strong> Outbound links rot. Point them at the current version of each page, and add a link to any newer sibling post that answers the next question.</li><li><strong>Re-run your quality checks.</strong> The same <a href="../qa-gates-before-you-publish/">QA gates</a> a new post passes apply here. A refresh that fails them is not done.</li><li><strong>Log it.</strong> Add one line to your <a href="../monday-seo-digest-for-founders/">Monday digest</a>: which post, what changed, and why.</li></ol>
+<p>Keep the title and the opening close to what they were. If you find yourself rewriting the headings, you are doing a rewrite and should stop and plan it as one.</p>
+<h2>How to run a rewrite</h2>
+<p>A rewrite is a new post that happens to live at an old address. Treat it with the same discipline as any new post:</p>
+<ul><li><strong>Give it a slot.</strong> A rewrite takes a real publish slot in your capped week. It does not ride along as extra work on top of two new posts. If your <a href="../two-post-week-seo-cadence/">two-post week</a> is already full, the rewrite waits or replaces one of them.</li><li><strong>Outline first.</strong> Start from five headings, the way a <a href="../fail-closed-outline-five-h2s/">fail-closed outline</a> works, before keeping any old paragraphs. Old text tends to drag the old structure back in.</li><li><strong>Keep the slug.</strong> Same URL, even if the title changes. If the title changes a lot, keep the core phrase so existing links still make sense in context.</li><li><strong>Keep the promises inbound links make.</strong> Check which of your own posts link here and what they say about it. If a sibling says &quot;see the five-step checklist,&quot; the rewrite should still have a checklist, or you update the sibling&#x27;s sentence too.</li><li><strong>Pass QA from scratch.</strong> No section gets a pass because it was approved last time.</li></ul>
+<h2>Protect the links on both sides</h2>
+<p>Most damage from updates is not to the page itself. It is to the connections around it.</p>
+<p>Before you publish any update, run a quick two-way check:</p>
+<ul><li><strong>Inbound:</strong> search your site for the slug and list every page that links to it. Confirm each anchor still describes the updated page.</li><li><strong>Outbound:</strong> confirm every link in the updated post returns a live page and is the best current target.</li></ul>
+<p>If the update created a gap, for example a sibling post now has no link back from this one, fix it in the same session. The <a href="../reciprocal-linking-checklist/">reciprocal linking checklist</a> covers the pattern, and it keeps an update from adding to your <a href="../internal-link-debt-orphan-posts/">internal link debt</a>.</p>
+<h2>Show readers what changed, briefly</h2>
+<p>An updated post should be honest about being updated without turning into a changelog. One line near the top or bottom is enough: &quot;Updated November 2026: steps 2 and 4 reflect the new settings page.&quot; Keep the original publish date in your records and add an updated date where your template supports it.</p>
+<p>Do not write a separate &quot;we updated our guide&quot; post. Like a relaunch post after a <a href="../cadence-reset-after-missed-week/">missed week</a>, it spends a slot on a page with no buyer question behind it.</p>
+<h2>When to retire instead</h2>
+<p>Some posts should not be refreshed or rewritten. Retire a post when:</p>
+<ul><li>The question it answers is no longer one your buyers ask.</li><li>A newer post answers the same question better, and two pages on one question only split attention.</li><li>The topic sits outside the cluster you now publish in.</li></ul>
+<p>Retiring does not mean deleting and leaving a dead link. If a newer post covers the same ground, merge any unique section into it and point the old page at the new one, either with a redirect if your host supports it or with a short note and a clear link at the top. Then update every internal link that pointed at the old page.</p>
+<h2>A simple maintenance rhythm</h2>
+<p>You do not need a big audit. Add one step to the weekly review you already run:</p>
+<table><tr><th>Cadence</th><th>Action</th></tr><tr><td>Weekly</td><td>Pick one post older than three months; decide refresh, rewrite, retire, or leave it</td></tr><tr><td>Weekly</td><td>If refresh, do it that week outside the publish cap</td></tr><tr><td>Monthly</td><td>If any rewrite is queued, give it one publish slot that month</td></tr><tr><td>Every update</td><td>Inbound and outbound link check, QA, one digest line</td></tr></table>
+<p>One post a week is enough. Over a year that covers fifty pages without ever pausing new work.</p>
+<h2>Start this week</h2>
+<ol><li>Pick one post older than three months and re-read it as a buyer.</li><li>Decide refresh, rewrite, or retire, and write the decision down.</li><li>If it is a refresh, fix facts, steps, and links, re-run QA, and keep the URL.</li><li>If it is a rewrite, give it a real slot and start from a five-heading outline.</li><li>Log the change in your Monday digest in one line.</li></ol>
+<p>If you want a publishing agent that ships new posts on a steady cadence and also keeps the old ones accurate without breaking their links, <a href="../../index.html#waitlist">join the SitePilot waitlist</a>. It runs the same rules this blog runs on.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
