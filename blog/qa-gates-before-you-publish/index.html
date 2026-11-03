@@ -43,7 +43,7 @@
 <h2>Gate 7 — Explicit approve</h2>
 <p>Pass when someone accountable records approve (PR approve, “approve &lt;slug&gt;” reply, or dogfood sign-off with timestamp). Fail when the pipeline auto-publishes from draft. Light customer edits are expected; incorporate them, then ship.</p>
 <h2>Gate 8 — Publish path + URL recorded</h2>
-<p>Pass when the file lands in the correct repo path (or CMS status), the live URL is known, and the weekly report can list it. Fail when “published” means a local draft nobody can open. Fix path, then retry.</p>
+<p>Pass when the file lands in the correct repo path (or CMS status), the live URL is known, and the weekly report can list it. Fail when “published” means a local draft nobody can open. Fix path, then retry. Just before this gate, give the meta description a <a href="../meta-description-founder-approves-30-seconds/">30-second check</a> against the finished post.</p>
 <h2>How to run this without theater</h2>
 <p>Store results next to the draft (frontmatter or a short <code>qa</code> note). Example fields: originality, structure, readability, brand_fit, anti_spam, internal_links, approved_by, approved_at. <strong>Any fail → rewrite or kill; never publish on fail.</strong></p>
 <p>A week with one strong post and one <a href="../skip-slot-keep-habit/">skipped slot</a> beats two weak posts. That is the quality bar behind <a href="../../index.html">SitePilot</a>: scheduled, quality-gated SEO publishing so more qualified people can engage with the product every month — while the team keeps building.</p>
