@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When two H1s sneak into a draft (and the QA gate that catches them) — SitePilot by Zed</title>
+  <meta name="description" content="Why a blog post should carry one main heading, how a second H1 slips into drafts, and the simple automated check a small SaaS team can run before publishing." />
+  <link rel="canonical" href="https://drewmorela.github.io/sitepilot-waitlist/blog/two-h1s-qa-gate/" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-11-16">2026-11-16</time></p>
+      <h1>When two H1s sneak into a draft (and the QA gate that catches them)</h1>
+<p>An H1 is the main heading of a page. In Markdown it is the line that starts with a single <code>#</code>. In HTML it is the <code>&lt;h1&gt;</code> tag. On a blog post it should say one thing: what this page is about. When a draft ends up with two of them, the page now has two answers to that question.</p>
+<p>This post is for founders of small software companies who approve blog posts rather than write them. The goal behind every post on this blog stays the same: <strong>more qualified people engaging with the product every month while the team keeps building.</strong> A clean heading structure is a small part of that. It helps a scanning reader, a screen reader, and a search engine agree on what the page covers.</p>
+<p>The fix is not a style debate. It is a yes-or-no check that runs before anything goes live.</p>
+<h2>Why one main heading matters</h2>
+<p>A page with one H1 has a clear top. Everything under it is a section, marked with H2s, and smaller points sit under those as H3s. That outline is what the <a href="../fail-closed-outline-five-h2s/">fail-closed outline</a> approach builds before a single paragraph is written.</p>
+<p>A second H1 breaks that shape in three ways:</p>
+<ul><li><strong>Readers lose the thread.</strong> Someone skimming sees two headings the same size and has to guess which one is the real topic.</li><li><strong>Assistive tools get a confusing map.</strong> People using screen readers often jump between headings. Two top-level headings make the page feel like two documents.</li><li><strong>The topic signal blurs.</strong> The H1 usually matches the title tag and the cluster slice the post was written for. If a second H1 names a different idea, the page now points two ways. The <a href="../title-tags-match-cluster-sentence/">title tag post</a> covers why that match matters.</li></ul>
+<p>Search engines can usually cope with more than one H1, so this is not about a penalty. It is about a page that says one thing clearly, which is what turns a visitor into a qualified reader.</p>
+<h2>How a second H1 sneaks in</h2>
+<p>Nobody types two H1s on purpose. They arrive through ordinary steps in a publishing session:</p>
+<ol><li><strong>A pasted section.</strong> Someone copies a block from another doc or an old post, and its heading comes along as <code>#</code> instead of <code>##</code>.</li><li><strong>A template that already has a title.</strong> The page layout prints the post title as an <code>&lt;h1&gt;</code>, and the Markdown body starts with its own <code>#</code> line too. Now the rendered page has two.</li><li><strong>An agent draft that restates the title.</strong> A writing tool, human or AI, opens with the headline, then adds a &quot;summary&quot; heading at the same level.</li><li><strong>A heading drawn with equals signs.</strong> In Markdown, a line underlined with <code>===</code> is also an H1. It is easy to miss in a review because it does not start with <code>#</code>.</li><li><strong>A refresh that adds a new top section.</strong> When an older post gets a <a href="../refresh-or-rewrite-aging-post/">refresh instead of a rewrite</a>, a new &quot;Update&quot; heading sometimes lands at the top level.</li></ol>
+<p>Each of these is a two-second mistake that a founder reading for meaning will not notice. That is exactly why it belongs in an automated gate, not in the approval read.</p>
+<h2>The gate: exactly one H1, checked before publish</h2>
+<p>The <a href="../qa-gates-before-you-publish/">quality gates before you publish</a> on this blog already required a page to have an H1 and at least two H2s. That rule caught a missing heading. It did not catch an extra one.</p>
+<p>So the structure gate now says: <strong>exactly one H1.</strong> The check works like this:</p>
+<table><tr><th>Step</th><th>What it does</th></tr><tr><td>Ignore code blocks</td><td>A <code>#</code> inside a code sample is not a heading, so fenced code is skipped</td></tr><tr><td>Count <code>#</code> headings</td><td>Lines that start with one <code>#</code> and a space</td></tr><tr><td>Count HTML H1s</td><td>Any <code>&lt;h1&gt;</code> written directly into the body</td></tr><tr><td>Flag underlined headings</td><td>A line followed by <code>===</code>, which Markdown also treats as an H1</td></tr><tr><td>Decide</td><td>One H1 passes. Zero or two-plus fails, with the count in the message</td></tr></table>
+<p>A fail names the row and the number, for example &quot;exactly one H1 allowed, found 2.&quot; The writer fixes it by demoting the extra heading to an H2 or removing it. The founder never has to open the file.</p>
+<p>When we added this rule, we ran it against every post already published here and checked each live page&#x27;s HTML. Each post had one H1. That is the boring result you want: the gate costs nothing on clean posts and only speaks up when something slips.</p>
+<h2>Check the rendered page, not only the draft</h2>
+<p>The Markdown can be clean and the published page can still have two H1s, because of the template issue in step 2 above. The draft gate cannot see the layout. So a second, smaller check runs after publishing: fetch the live page and count <code>&lt;h1&gt;</code> tags in the HTML.</p>
+<p>If the draft says one and the live page says two, the problem is in the template. Fix it once there and every future post is covered. This is the same idea as checking that a page returns a working response before you call it shipped.</p>
+<h2>Where this fits in the approval flow</h2>
+<p>The founder&#x27;s job in <a href="../approve-without-becoming-editor/">approving without becoming the editor</a> is to answer a few yes-or-no questions about fit and accuracy. Heading structure should never be one of them. Put it where machines are good:</p>
+<ol><li>The writer finishes the draft from the <a href="../one-screen-content-brief/">one-screen content brief</a>.</li><li>The structure gate runs: one H1, at least two H2s.</li><li>The rest of the gates run: originality, readability, brand fit, anti-spam, internal links.</li><li>Only a draft that passes all of them reaches the founder.</li><li>After publishing, the live page is fetched and the H1 count is checked again.</li></ol>
+<p>If a draft keeps failing structure after two rounds, that is often a sign the outline itself is unclear. At that point it may be time to <a href="../when-to-kill-a-draft-not-rewrite/">kill the draft instead of rewriting it</a>.</p>
+<h2>Start this week</h2>
+<ol><li>Open your last three published posts and count the main headings on the live page.</li><li>If your template prints the title as an H1, make sure post bodies start at H2.</li><li>Add &quot;exactly one H1&quot; to your pre-publish checklist, and automate it if you can.</li><li>Add a post-publish check of the live HTML for the same count.</li><li>Keep the founder&#x27;s approval read for meaning, not formatting.</li></ol>
+<p>If you want a publishing agent that runs these gates on every post before you see it, <a href="../../index.html#waitlist">join the SitePilot waitlist</a>. This blog runs on the same rules.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
