@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canonical URL mistakes when refreshing a post — SitePilot by Zed</title>
+  <meta name="description" content="What a canonical tag does, the five ways a blog refresh quietly breaks it, and a short pre-publish check a small SaaS team can run so an updated post keeps its address." />
+  <link rel="canonical" href="https://drewmorela.github.io/sitepilot-waitlist/blog/canonical-url-mistakes-refreshing-post/" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="draft-banner">Dogfood blog · SitePilot by Zed · quality-gated cadence</div>
+
+  <header class="wrap nav">
+    <div class="brand"><span class="mark" aria-hidden="true"></span> SitePilot <span style="color:var(--muted);font-weight:500;font-size:.9rem">by Zed</span></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../problem.html">The problem</a>
+      <a href="../">Blog</a>
+      <a class="btn btn-primary" href="../../index.html#waitlist" style="padding:.55rem 1rem;font-size:.9rem">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="wrap blog-article">
+      <p class="blog-meta"><a href="../">← Blog</a> · <time datetime="2026-11-17">2026-11-17</time></p>
+      <h1>Canonical URL mistakes when refreshing a post</h1>
+<p>A canonical URL is the one address you want search engines to treat as the real home of a page. You declare it with a single line in the page&#x27;s head: <code>&lt;link rel=&quot;canonical&quot; href=&quot;...&quot;&gt;</code>. When a post has one clear home, every link, share, and bit of search history points at the same place.</p>
+<p>Refreshing an older post is one of the best things a small software company can do with its blog. It is also the moment canonical mistakes tend to happen, because a refresh touches templates, slugs, and copies of the page at once. This post is for founders who approve posts rather than build the site. The goal stays the same as everywhere on this blog: <strong>more qualified people engaging with the product every month while the team keeps building.</strong> A post that quietly loses its address works against that.</p>
+<h2>What a canonical tag actually does</h2>
+<p>Think of it as a label that says &quot;if you find this content in more than one place, this is the original.&quot; It matters because the same post can often be reached several ways: with and without a trailing slash, with tracking parameters on the end, over <code>http</code> and <code>https</code>, or through a print or preview view.</p>
+<p>Two things are worth knowing before you worry about it:</p>
+<ul><li><strong>It is a strong hint, not a command.</strong> Search engines usually follow it, but they can pick a different address if other signals disagree, such as internal links and the sitemap pointing somewhere else.</li><li><strong>Most pages should point at themselves.</strong> A self-referencing canonical, where the page names its own address, is the normal case. It closes the door on stray duplicate versions.</li></ul>
+<p>That is why this blog now prints a self-referencing canonical on every page, including the home page and the blog index. It took one line in the publish template and a one-time backfill of the pages that were already live.</p>
+<h2>Mistake 1: changing the slug during a refresh</h2>
+<p>The slug is the readable last part of the address, like <code>/blog/refresh-or-rewrite-aging-post/</code>. When a post gets a new title, it is tempting to give it a matching new slug. That turns a refresh into a new page with no history, and every old link now leads to an error.</p>
+<p>The <a href="../refresh-or-rewrite-aging-post/">refresh-or-rewrite post</a> makes the rule plain: a refresh keeps the URL. The title tag and H1 can change; the address should not. If the topic has drifted so far that the old slug is misleading, that is a sign you are rewriting, not refreshing, and the <a href="../when-to-kill-a-draft-not-rewrite/">kill-or-rewrite call</a> comes first.</p>
+<p>If a slug truly must change, the old address needs a permanent redirect to the new one, and the new page&#x27;s canonical must name the new address. Do both in the same publish. A canonical alone does not move readers who arrive at the old link.</p>
+<h2>Mistake 2: a template that points every page at the home page</h2>
+<p>This one usually comes from a well-meant shortcut. Someone adds a canonical tag to the shared page layout with a fixed address, often the home page, so every post now tells search engines &quot;the real version of me is the home page.&quot;</p>
+<p>The result is that posts can stop showing up on their own, because they have each declared themselves a copy of something else. A refresh is often when someone opens the template, so it is often when this gets introduced.</p>
+<p>The fix is to build the canonical from each page&#x27;s own slug, never to hard-code it. On this blog the publish script fills it in from the same slug it uses to write the file, so the two cannot disagree.</p>
+<h2>Mistake 3: the canonical, the sitemap, and the internal links disagree</h2>
+<p>Search engines weigh the canonical against other signals. If the canonical says <code>/blog/post/</code> but the sitemap lists <code>/blog/post</code> without the slash, and half your internal links use a third version with a tracking parameter, you are sending mixed messages.</p>
+<p>Pick one form and use it everywhere:</p>
+<table><tr><th>Signal</th><th>Should use</th></tr><tr><td>Canonical tag</td><td>The full <code>https</code> address, same trailing-slash style as the rest of the site</td></tr><tr><td>Sitemap entry</td><td>That exact address</td></tr><tr><td>Internal links</td><td>That exact address, or a relative link that resolves to it</td></tr><tr><td>Shared links in email or social</td><td>That exact address, before any tracking parameters</td></tr></table>
+<p>A refresh is a good time to check this, because refreshes usually add a few new internal links. The <a href="../reciprocal-linking-checklist/">reciprocal linking checklist</a> and the <a href="../internal-link-debt-orphan-posts/">orphan-post cleanup</a> both assume links point at the canonical form.</p>
+<h2>Mistake 4: pointing the canonical at a page that redirects or no longer exists</h2>
+<p>Canonicals rot. A post was moved last year, the redirect was added, but the canonical on a related page still names the old address. Now the &quot;real home&quot; of that page is a redirect, or worse, an error page.</p>
+<p>The rule is simple: the canonical address should load directly with a normal success response. Not a redirect, not a missing page, not a page that is blocked from search. This is something a script can check in seconds by fetching the canonical address and looking at the response, so it belongs in a gate rather than in a founder&#x27;s review.</p>
+<h2>Mistake 5: a refreshed copy published next to the original</h2>
+<p>Sometimes a refresh is drafted as a brand-new post, published, and the original is left up &quot;for now.&quot; Two pages now cover the same thing with mostly the same words. Each claims to be canonical for itself, and they compete with each other.</p>
+<p>There are two clean outcomes. Either merge the new material into the original address and publish over it, or, if the new piece is genuinely different, give it a distinct angle, its own <a href="../title-tags-match-cluster-sentence/">title tag</a>, and its own <a href="../meta-description-founder-approves-30-seconds/">meta description</a>. &quot;Leave both up and sort it out later&quot; is the one outcome to avoid.</p>
+<h2>A pre-publish check for refreshed posts</h2>
+<p>None of this needs a founder to read HTML. It needs a few yes-or-no checks that run before anything goes live, the same way the <a href="../qa-gates-before-you-publish/">quality gates before you publish</a> work and the way the <a href="../two-h1s-qa-gate/">one-H1 check</a> was added:</p>
+<ol><li><strong>Same slug as before?</strong> If not, is there a redirect from the old address in the same publish?</li><li><strong>Canonical present and built from the slug?</strong> Not a fixed address in the template.</li><li><strong>Canonical address matches the sitemap entry exactly?</strong> Same scheme, same trailing slash.</li><li><strong>Canonical address loads directly?</strong> A normal success response, not a redirect or error.</li><li><strong>No second live page covering the same topic?</strong> If there is, merge or differentiate before publishing.</li></ol>
+<p>The first and last items are judgment calls an agent can flag and a founder can answer in a sentence. The middle three are mechanical and should fail closed: if the check cannot confirm them, the post does not go out.</p>
+<h2>What the founder actually approves</h2>
+<p>For a refresh, the approval read should take about as long as any other post. The founder confirms the update is accurate and still sounds like the company. The address question should arrive pre-answered: &quot;Refresh of an existing post, same URL, canonical checked.&quot; If the agent proposes a slug change, that is the one line that deserves a second look, because it is the one change that is hard to undo.</p>
+<p>Keep the address boring and stable, let the content get better, and the post keeps everything it has already earned.</p>
+      <p class="blog-cta">Want this cadence on your product blog? <a href="../../index.html#waitlist">Join the SitePilot waitlist</a>.</p>
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© 2026 Zed · SitePilot · Dogfood post</div>
+    <nav aria-label="Site">
+      <a href="../../index.html">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../index.html#waitlist">Waitlist</a>
+    </nav>
+  </footer>
+</body>
+</html>
